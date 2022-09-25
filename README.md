@@ -89,3 +89,6 @@ nodemon ./src/main.js
 > Bilibili API 第三方文档：https://qinshixixing.gitbooks.io/bilibiliapi/content/
 >
 > 哔哩哔哩-API收集整理：https://github.com/SocialSisterYi/bilibili-API-collect
+>
+> 网易云音乐 NodeJS 版 API：https://binaryify.github.io/NeteaseCloudMusicApi/#/
+
