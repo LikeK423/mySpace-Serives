@@ -71,8 +71,8 @@ nodemon ./src/main.js
         "videoTitle": "xxx", // 视频标题
         "videoPicture": "xxx", // 视频封面地址
         "videoUrl": "xxx", //  视频地址
-        "userName": "xxx", // UP主名称
-        "userAvatar": "xxx", // UP主头像地址
+        "userName": "xxx", // 作者名称
+        "userAvatar": "xxx", // 作者头像地址
         "userSpace": "xxx" // 作者空间地址
     }
 ]
