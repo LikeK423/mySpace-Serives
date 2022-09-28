@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const catalogues =fs.readdirSync(__dirname);
+const catalogues = fs.readdirSync(__dirname);
 let requestFunction = {};
 
 // 遍历目录
