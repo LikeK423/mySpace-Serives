@@ -11,7 +11,7 @@ const biliVideoRequest = number => {
 			path: `/x/web-interface/index/top/feed/rcmd?y_num=4&fresh_type=3&feed_version=V4&fresh_idx_1h=2&fetch_row=1&fresh_idx=2&brush=1&homepage_ver=1&ps=${number}`,
 			method: 'GET'
 		};
-		https.request(options, (res) => {
+		const callBack = (res) => {
 			let str = "";
 			res.setEncoding('utf8');
 			res.on('data', (chunk) => {
@@ -23,7 +23,8 @@ const biliVideoRequest = number => {
 			res.on("end",()=>{
 				resolve(JSON.parse(str));
 			})
-		}).end();
+		}
+		https.request(options, callBack).end();
 	})
 }
 
