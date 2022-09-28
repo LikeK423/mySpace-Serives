@@ -4,7 +4,7 @@ const {
 	bilibili
 } = require('../../constants/api-host');
 
-const biliVideoRequest = number => {
+const videoRecommend = number => {
 	return new Promise((resolve, reject)=>{
 		const options = {
 			hostname: bilibili,
@@ -28,6 +28,4 @@ const biliVideoRequest = number => {
 	})
 }
 
-module.exports = {
-	biliVideoRequest
-}
+module.exports = videoRecommend

@@ -1,6 +1,4 @@
-const {
-	biliVideoRequest
-} = require('../request/bilibili/bilibili.request');
+const requestFunction = require('../request');
 const {
 	biliDataHandle
 } = require('../utils/request-data-handel');
@@ -11,7 +9,7 @@ class VideoController {
 		 // 根据query获取需要返回的视频数量
 		 const { number } = ctx.request.query;
 		 // 获取请求回来的数据
-		 let result = await biliVideoRequest(number);
+		 let result = await requestFunction.biliVideoRecommend(number);
 		 // 对请求回来的数据进行处理并返回
 		 ctx.body = biliDataHandle(result);
 	}
