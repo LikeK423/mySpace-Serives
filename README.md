@@ -29,6 +29,8 @@ npm install
 本地运行
 
 ```
+npm start
+或者
 node ./src/main.js
 或者
 nodemon ./src/main.js
