@@ -1,6 +1,6 @@
 const {
 	biliVideoRequest
-} = require('../request/bilibili.request');
+} = require('../request/bilibili/bilibili.request');
 const {
 	biliDataHandle
 } = require('../utils/request-data-handel');

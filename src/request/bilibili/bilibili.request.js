@@ -2,7 +2,7 @@ const https = require('https');
 
 const {
 	bilibili
-} = require('../constants/api-host');
+} = require('../../constants/api-host');
 
 const biliVideoRequest = number => {
 	return new Promise((resolve, reject)=>{
