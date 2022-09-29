@@ -1,31 +1,11 @@
-const https = require('https');
+const axiosRequest = require('../../utils/axios-request');
 
-const {
-	bilibili
-} = require('../../constants/api-host');
-
-const videoRecommend = number => {
-	return new Promise((resolve, reject)=>{
-		const options = {
-			hostname: bilibili,
-			path: `/x/web-interface/index/top/feed/rcmd?y_num=4&fresh_type=3&feed_version=V4&fresh_idx_1h=2&fetch_row=1&fresh_idx=2&brush=1&homepage_ver=1&ps=${number}`,
-			method: 'GET'
-		};
-		const callBack = (res) => {
-			let str = "";
-			res.setEncoding('utf8');
-			res.on('data', (chunk) => {
-				str += chunk;
-			});
-			res.on("error", (err) => {
-				reject(err);
-			});
-			res.on("end",()=>{
-				resolve(JSON.parse(str));
-			})
-		}
-		https.request(options, callBack).end();
-	})
+const biliVideoRecommend = number => {
+	const options = {
+		url: `https://api.bilibili.com/x/web-interface/index/top/feed/rcmd?y_num=4&fresh_type=3&feed_version=V4&fresh_idx_1h=2&fetch_row=1&fresh_idx=2&brush=1&homepage_ver=1&ps=${number}`,
+		method: 'GET'
+	}
+	return axiosRequest(options)
 }
 
-module.exports = videoRecommend
+module.exports = biliVideoRecommend
