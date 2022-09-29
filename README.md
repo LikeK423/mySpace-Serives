@@ -142,7 +142,7 @@ nodemon ./src/main.js
 
 3.1 请求实例
 
-> localhost/api/bili/video/search?searchStr=舞蹈区
+> localhost/api/bili/search?searchStr=舞蹈区
 
 3.2 请求方式：GET
 
