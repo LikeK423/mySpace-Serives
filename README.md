@@ -12,13 +12,9 @@
 
 
 
-# 项目运行
+# 项目的一些说明
 
-配置.env文件 (默认使用80端口)
-
-```
-APP_PORT=80 
-```
+## 运行
 
 安装依赖
 
@@ -36,7 +32,21 @@ node ./src/main.js
 nodemon ./src/main.js
 ```
 
+## 文件配置
 
+在src的同级目录下配置.env文件，文件内容如下
+
+```
+APP_PORT=80 // 服务器使用端口
+```
+
+
+
+## 数据
+
+请求其它网站API返回的数据很多，无法判断其用处，因此都是返回处理过的数据。如果需要未经处理的数据，可以在请求时传入isHandle，值不为空就行
+
+> 例：localhost:80/api/bili/video/recommend?number=10&isHandle=1  
 
 
 
@@ -49,7 +59,7 @@ nodemon ./src/main.js
 
 1.1 请求实例：
 
-> localhost:80/api/bili?number=2
+> localhost:80/api/bili/video/recommend?number=10
 
 1.2 请求方式：GET
 
