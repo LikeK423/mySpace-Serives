@@ -18,8 +18,11 @@ class VideoController {
 
 	// BiliBili视频搜索
 	async biliVideoSearch (ctx, next){
-		 const { searchStr } = ctx.request.query;
-		const result = await biliVideoSearch(encodeURI(searchStr));
+	  const { searchStr, uid } = ctx.request.query;
+		const result = await biliVideoSearch({
+			searchStr:encodeURI(searchStr),
+			uid:uid,
+		});
 		ctx.body = searchDataHandle(result);
 	}
 }
