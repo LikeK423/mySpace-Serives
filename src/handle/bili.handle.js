@@ -26,9 +26,13 @@ class BiliHandle {
 
 	// 处理搜索返回的关键词
 	searchDataHandle (jsonData){
+		// encodeURI(searchStr)
 		let result = [];
 		jsonData.result.tag.forEach((item)=>{
-			result.push(item.value)
+			result.push({
+				value:item.value,
+				searchUrl:`https://search.bilibili.com/all?keyword=${encodeURI(item.value)}&from_source=webtop_search&spm_id_from=333.1007&search_source=5` // 根据PC端网页获取的路径
+			})
 		});
 		return result
 	}
