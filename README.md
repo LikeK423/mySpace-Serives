@@ -44,7 +44,7 @@ APP_PORT=80 // 服务器使用端口
 
 ## 数据
 
-请求其它网站API返回的数据很多，无法判断其用处，因此都是返回处理过的数据。如果需要未经处理的数据，可以在请求时传入isHandle，值不为空就行
+请求其它网站API返回的数据很多，无法判断其用处，因此都是默认返回处理过的数据。如果需要未经处理的数据，可以在请求时传入isHandle，值为false
 
 > 例：localhost:80/api/bili/video/recommend?number=10&isHandle=1  
 
