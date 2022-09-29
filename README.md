@@ -117,7 +117,7 @@ nodemon ./src/main.js
     {
         "songName": "xxx",
         "songId": "xxx",
-        "authorName": "xxx",
+        "singer": "xxx",
         "albumId": "xxx",
         "albumName": "xxx",
         "albumCoverUrl": "xxx"
