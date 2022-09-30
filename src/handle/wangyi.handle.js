@@ -14,7 +14,8 @@ class wangyiHandle {
 				singer:authors,
 				albumId:item.al.id,
 				albumName:item.al.name,
-				albumCoverUrl:item.al.picUrl
+				albumCoverUrl:item.al.picUrl,
+				copyright:item.copyright
 			})
 		}
 		return result;
