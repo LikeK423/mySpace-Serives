@@ -1,9 +1,7 @@
 const biliVideoRecommend = require('../request/bilibili/videoRecommend');
-const biliVideoSearch = require('../request/bilibili/search');
 const dataIsHandle = require('../utils/dataIsHandle');
 const {
 	recommendDataHandle,
-	searchDataHandle
 } = require('../handle/bili.handle');
 
 
@@ -19,15 +17,6 @@ class VideoController {
 		 ctx.body = dataIsHandle(result,isHandle,recommendDataHandle);
 	}
 
-	// BiliBili视频搜索
-	async biliVideoSearch (ctx, next){
-	  const { searchStr, uid, isHandle } = ctx.request.query;
-		const result = await biliVideoSearch({
-			searchStr:encodeURI(searchStr),
-			uid:uid,
-		});
-		ctx.body = dataIsHandle(result,isHandle,searchDataHandle);
-	}
 }
 
 module.exports = new VideoController();
