@@ -14,7 +14,9 @@ class UserController {
 
 	// 登录用户
 	async userLogin(ctx, next){
-		ctx.body = "登录成功~"
+		// 设置token令牌
+
+		ctx.body = "登录成功~";
 	}
 
 	// 注销用户
