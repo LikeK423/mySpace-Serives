@@ -217,7 +217,26 @@ APP_PORT=80 // 服务器使用端口
 
 
 
+## 5. 用户登录
 
+5.1请求实例
+
+> localhost/user/login
+
+5.2 请求方法：POST
+
+5.3 传入参数
+
+```json
+{
+    "account": "12ses",
+    "password": "asc"
+}
+```
+
+5.4 返回参数
+
+​	暂无，以后可能返回token令牌和一些cookie或者个人数据之类的
 
 # 一些相关的文档
 
