@@ -36,6 +36,12 @@ nodemon ./src/main.js
 
 ```
 APP_PORT=80 // 服务器使用端口
+
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_DATABASE=k423 
+MYSQL_USER=root
+MYSQL_PASSWORD=12345678
 ```
 
 
