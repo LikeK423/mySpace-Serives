@@ -7,6 +7,10 @@ const errorHandler = (error, ctx) => {
 			status = 400;
 			message = "账号已存在~";
 			break;
+		case errorTypes.PASSWORD_ERROR:
+			status = 400;
+			message = "密码错误~";
+			break;
 		default:
 			status = 404;
 			message = "未知错误~";
