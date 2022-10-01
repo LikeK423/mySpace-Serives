@@ -7,6 +7,11 @@ class LettersController {
 	async submitLetter (){
 
 	}
+
+	// 删除信件
+	async deleteLetter(){
+
+	}
 }
 
 module.exports = new LettersController();

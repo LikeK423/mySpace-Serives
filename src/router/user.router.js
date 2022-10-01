@@ -1,12 +1,18 @@
 const Router = require('koa-router');
 
+const {
+	userRegister,
+	userLogin,
+	deleteUser
+} = require('../controller/user.controller');
+const {
+	verifyUser,
+	encryptPassword
+} = require("../middleware/user.middleware");
+
 const userRouter = new Router({prefix:'/user'});
 
-const {
-	userRegister
-} = require('../controller/user.controller');
-
-
-userRouter.post('/create',userRegister);// 用户注册
-
+userRouter.post('/create',verifyUser,encryptPassword,userRegister);// 用户注册
+userRouter.post('/login',encryptPassword,userLogin);// 用户登录
+userRouter.delete('/delete',deleteUser);// 用户注销
 module.exports = userRouter;

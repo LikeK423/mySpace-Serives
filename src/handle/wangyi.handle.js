@@ -1,14 +1,12 @@
 class wangyiHandle {
 	// 处理搜索返回的JSON数据
 	searchDateHandle(jsonData){
-		const data = jsonData.result.songs;
-		let result = [];
-		for(let item of data){
+		return jsonData.result.songs.map((item)=>{
 			let authors = "";
 			for (let x of item.ar){
 				authors += `${x.name} `;
 			}
-			result.push({
+			return {
 				songName:item.name,
 				songId:item.id,
 				singer:authors,
@@ -16,9 +14,8 @@ class wangyiHandle {
 				albumName:item.al.name,
 				albumCoverUrl:item.al.picUrl,
 				copyright:item.copyright
-			})
-		}
-		return result;
+			}
+		})
 	}
 }
 
