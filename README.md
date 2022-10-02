@@ -119,7 +119,7 @@ MYSQL_PASSWORD=12345678
 
 2.1 请求实例：
 
-> localhost:80/api/wangyi/music/search?name=周杰伦
+> localhost:80/api/wangyi/search?name=周杰伦
 
 2.2 请求方式：GET
 
@@ -164,7 +164,7 @@ MYSQL_PASSWORD=12345678
 
 3.1 请求实例
 
-> localhost/api/bili/search?searchStr=舞蹈区
+> localhost/api/bili/search?content=舞蹈区
 
 3.2 请求方式：GET
 

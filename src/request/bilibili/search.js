@@ -1,7 +1,7 @@
 const axiosRequest = require('../../utils/axios-request');
 const objectToQuery = require('../../utils/objectToQuery');
 
-const search = ({searchStr, uid}) => {
+const search = ({content, uid}) => {
 	// 将query的字符串转变为对象
 	const object = {
 		// 其它参数不清楚具有什么用处
@@ -19,7 +19,7 @@ const search = ({searchStr, uid}) => {
 		special_num:'10',
 		bangumi_num:'10',
 		upuser_num:'3',
-		term:searchStr,// 查询内容
+		term:content,// 查询内容
 		rnd:'0.18019345250340724',
 		buvid:'1FFFE968-FA53-199A-B0B5-58014C09E65523798infoc',
 		spmid:'333.1007'
