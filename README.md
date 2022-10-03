@@ -71,7 +71,7 @@ MYSQL_PASSWORD=12345678
 
 1.1 请求实例：
 
-> localhost:80/api/bili/video/recommend?number=10
+> /api/bili/video/recommend?number=10
 
 1.2 请求方式：GET
 
@@ -79,7 +79,7 @@ MYSQL_PASSWORD=12345678
 
 | 参数名 | 类型 |     描述     | 是否必需 |
 | :----: | :--: | :----------: | :------: |
-| number | INT  | 返回视频数量 |    是    |
+| number | INT  | 返回视频数量 |    否    |
 
 1.4 返回类型：
 
@@ -119,7 +119,7 @@ MYSQL_PASSWORD=12345678
 
 2.1 请求实例：
 
-> localhost:80/api/wangyi/search?name=周杰伦
+> /api/wangyi/search?name=周杰伦
 
 2.2 请求方式：GET
 
@@ -164,7 +164,7 @@ MYSQL_PASSWORD=12345678
 
 3.1 请求实例
 
-> localhost/api/bili/search?content=舞蹈区
+> /api/bili/search?content=舞蹈区
 
 3.2 请求方式：GET
 
@@ -201,7 +201,7 @@ MYSQL_PASSWORD=12345678
 
 4.1 请求实例
 
-> localhost/user/create
+> /user/create
 
 4.2 请求方法：POST
 
@@ -227,7 +227,7 @@ MYSQL_PASSWORD=12345678
 
 5.1请求实例
 
-> localhost/user/login
+> /user/login
 
 5.2 请求方法：POST
 
