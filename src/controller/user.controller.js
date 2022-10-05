@@ -1,6 +1,6 @@
 const service = require('../service/user.service');
 
-class UserController {
+module.exports = new class {
 	// 注册用户
 	async userRegister (ctx,next){
 		const { name, account, password } = ctx.request.body;
@@ -24,5 +24,3 @@ class UserController {
 
 	}
 }
-
-module.exports = new UserController();

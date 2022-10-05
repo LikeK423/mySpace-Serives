@@ -4,13 +4,15 @@ const biliHandle = require("../handle/bili.handle");
 const googleHandle = require('../handle/google.handle');
 const bingHandle = require('../handle/google.handle');
 
-const googleSearch = require('../request/google/search');
-const bingSearch = require('../request/bing/search');
-const wangyiSearch = require('../request/wangyi/search');
-const biliVideoSearch = require('../request/bilibili/search');
+const {
+	googleSearch,
+	bingSearch,
+	wangyiSearch,
+	biliSearch
+} = require('../request');
 
 
-class SearchController{
+module.exports = new class{
 	// 谷歌搜索
 	async googleSearch(ctx, next){
 		const { content, isHandle } = ctx.request.query;
@@ -43,12 +45,10 @@ class SearchController{
 	// BiliBili搜索
 	async biliSearch (ctx, next){
 		const { content, uid, isHandle } = ctx.request.query;
-		const result = await biliVideoSearch({
+		const result = await biliSearch({
 			content:encodeURI(content),
 			uid:uid,
 		});
 		ctx.body = dataIsHandle(result,isHandle,biliHandle.searchDataHandle);
 	}
 }
-
-module.exports = new SearchController()

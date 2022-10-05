@@ -1,7 +1,7 @@
 const axiosRequest = require('../../utils/axios-request');
 const objectToQuery = require("../../utils/objectToQuery");
 
-const biliVideoRecommend = number => {
+const videoRecommend = number => {
 	const object = {
 		y_num:'4',
 		fresh_type:'3',
@@ -20,4 +20,4 @@ const biliVideoRecommend = number => {
 	return axiosRequest(options)
 }
 
-module.exports = biliVideoRecommend
+module.exports = videoRecommend

@@ -2,7 +2,7 @@ const {
 	letterCreate
 } = require('../service/letters.service')
 
-class LettersController {
+module.exports = new class {
 	// 提交信件
 	async submitLetter (){
 
@@ -13,5 +13,3 @@ class LettersController {
 
 	}
 }
-
-module.exports = new LettersController();
