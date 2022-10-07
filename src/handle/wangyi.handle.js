@@ -37,6 +37,7 @@ module.exports = new class {
 				type:item.type,
 				time:msToMin(item.time)
 			}
+
 		});
 	}
 }
