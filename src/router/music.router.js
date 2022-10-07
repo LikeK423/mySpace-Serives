@@ -6,7 +6,7 @@ const {
 	getMusicUrl
 } = require('../controller/music.controller');
 
-musicRouter.get('/wangyi/music/play',getMusicUrl);// 获取BiliBili首页推荐视频信息
+musicRouter.get('/wangyi/music/play',getMusicUrl);// 获取网易云音乐url
 
 
 module.exports = musicRouter;

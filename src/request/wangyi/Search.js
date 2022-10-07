@@ -12,7 +12,7 @@ const { URLSearchParams } = require("url");
 // }
 
 
-const search = (dates)=>{
+module.exports = (dates)=>{
 	let options = {
 		method:  'POST',
 		url:  'https://music.163.com/weapi/cloudsearch/get/web',// 这个 https://music.163.com/weapi/cloudsearch/get/web?csrf_token= 也行
@@ -23,5 +23,3 @@ const search = (dates)=>{
 	}
 	return axiosRequest(options)
 }
-
-module.exports = search

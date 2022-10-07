@@ -1,7 +1,3 @@
-/*
-* 使用axios进行请求
-* */
-
 const axios = require("axios");
 
 const axiosRequest =  (options)=>{

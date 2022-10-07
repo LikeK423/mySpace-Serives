@@ -1,7 +1,7 @@
 const axiosRequest = require('../../utils/axios-request');
 const objectToQuery = require("../../utils/objectToQuery");
 
-const search = (content)=>{
+module.exports = (content)=>{
 	const object = {
 		pt: "msnedgentp",
 		rt: "1",
@@ -26,5 +26,3 @@ const search = (content)=>{
 	console.log(options.url);
 	return axiosRequest(options)
 }
-
-module.exports = search;

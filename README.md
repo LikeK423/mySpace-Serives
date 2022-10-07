@@ -46,11 +46,11 @@ MYSQL_PASSWORD=12345678
 
 
 
-## 数据
+## 请求返回的数据
 
-请求其它网站API返回的数据很多，无法判断其用处，因此都是默认返回处理过的数据。如果需要未经处理的数据，可以在请求时传入isHandle，值为false
+请求其它网站API返回的数据很多，无法判断其用处，因此都是默认返回处理过的数据（根据我的需求）。如果需要未经处理的数据，可以在请求时传入isHandle，值为false
 
-> 例：localhost:80/api/bili/video/recommend?number=10&isHandle=1  
+> 例：localhost:80/api/bili/video/recommend?number=10&isHandle=false  
 
 
 
@@ -192,6 +192,12 @@ MYSQL_PASSWORD=12345678
 | :-------: | :----------: |
 |   value   | 搜索结果内容 |
 | searchUrl | 搜索结果URL  |
+
+
+
+
+
+## 4. 网易云音乐播放链接
 
 
 

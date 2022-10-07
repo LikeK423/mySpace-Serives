@@ -1,7 +1,7 @@
 const axiosRequest = require('../../utils/axios-request');
 const objectToQuery = require("../../utils/objectToQuery");
 
-const search = (content)=>{
+module.exports = (content)=>{
 	const object = {
 		q:content,
 		cp:content.length,
@@ -48,5 +48,3 @@ const search = (content)=>{
 
 	return axiosRequest(options)
 }
-
-module.exports = search;

@@ -1,7 +1,7 @@
 const axiosRequest = require('../../utils/axios-request');
 const objectToQuery = require('../../utils/objectToQuery');
 
-const search = ({content, uid}) => {
+module.exports = ({content, uid}) => {
 	// 将query的字符串转变为对象
 	const object = {
 		// 其它参数不清楚具有什么用处
@@ -31,5 +31,3 @@ const search = ({content, uid}) => {
 	}
 	return axiosRequest(options)
 }
-
-module.exports = search
