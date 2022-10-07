@@ -10,7 +10,7 @@ module.exports = new class {
 		const { id, level, isHandle } = ctx.query;
 		const data = {
 			ids: `[${id}]`,// 歌曲ID
-			level: level || 'lossless',// 音质 standard, exhigh, lossless, hires
+			level: level || 'standard',// 音质 standard, exhigh, lossless, hires
 			encodeType: 'flac',
 		}
 		const result = await wangyiGetSongUrl(data);
