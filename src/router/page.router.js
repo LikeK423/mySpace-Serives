@@ -3,7 +3,7 @@ const Router = require('koa-router');
 const pageRouter = new Router();
 
 const {
-	returnSamplePage,
+	returnSamplePage
 } = require('../controller/page.controller');
 
 pageRouter.get('/',returnSamplePage);

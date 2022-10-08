@@ -3,6 +3,9 @@ const {
 	page
 } = require('../path')
 
+const requ = require('../../test');
+
+
 module.exports = new class {
 	async returnSamplePage (ctx,next){
 		ctx.response.set('content-type', 'text/html');
