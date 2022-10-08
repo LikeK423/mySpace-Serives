@@ -46,7 +46,7 @@ module.exports = new class{
 	async biliSearch (ctx, next){
 		const { content, uid, isHandle } = ctx.request.query;
 		const result = await biliSearch({
-			content:encodeURI(content),
+			content:content,
 			uid:uid,
 		});
 		ctx.body = dataIsHandle(result,isHandle,biliHandle.searchDataHandle);
