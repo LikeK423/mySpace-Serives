@@ -6,7 +6,7 @@
 
 基于KOA框架的个人空间服务器代码
 
-已经部署到服务器上，把localhost换成https://www.k423.space:80
+已经部署到服务器上，把localhost换成https://www.k423.space:8888
 
 
 
@@ -35,7 +35,7 @@ nodemon ./src/main.js
 在src的同级目录下配置.env文件，文件内容如下
 
 ```
-APP_PORT=80 // 服务器使用端口
+APP_PORT=8888 // 服务器使用端口
 
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
@@ -50,7 +50,7 @@ MYSQL_PASSWORD=12345678
 
 请求其它网站API返回的数据很多，无法判断其用处，因此都是默认返回处理过的数据（根据我的需求）。如果需要未经处理的数据，可以在请求时传入isHandle，值为false
 
-> 例：localhost:80/api/bili/video/recommend?number=10&isHandle=false  
+> 例：localhost:8888/api/bili/video/recommend?number=10&isHandle=false  
 
 
 
@@ -197,6 +197,8 @@ MYSQL_PASSWORD=12345678
 
 
 
+
+
 ## 4. 网易云音乐播放链接
 
 4.1 请求实例
@@ -226,6 +228,55 @@ MYSQL_PASSWORD=12345678
 }
 ]
 ```
+
+
+
+
+
+## 5. 必应每日壁纸
+
+5.1 请求实例
+
+> /api/bing/wallpaper
+
+
+
+5.2 请求方法：GET
+
+5.3 传入参数
+
+| 属性名 |                    描述                     | 是否必需 |    值     |
+| :----: | :-----------------------------------------: | :------: | :-------: |
+| format |           返回数据格式，默认json            |    否    | json、xml |
+|  time  | 图片日期，默认返回今天图片；0:今天，1:昨天… |    否    |   0 ~ 7   |
+| number |             返回图片数量，默认1             |    否    |  1  ~ 8   |
+|  area  |                    地区                     |    否    | zh-CN、…  |
+
+5.4 返回参数
+
+```
+[
+    {
+        "data": " ",
+        "title": " ",
+        "description": " ",
+        "descriptionSearch": " ",
+        "imgUrl": " "
+    }
+]
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

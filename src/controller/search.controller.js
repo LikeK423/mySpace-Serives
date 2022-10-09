@@ -3,7 +3,7 @@ const dataIsHandle = require("utils/dataIsHandle");
 const wangyiHandle = require("handle/wangyi.handle");
 const biliHandle = require("handle/bili.handle");
 const googleHandle = require('handle/google.handle');
-const bingHandle = require('handle/google.handle');
+const bingHandle = require('handle/bing.handle');
 
 const {
 	googleSearch,

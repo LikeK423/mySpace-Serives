@@ -6,21 +6,25 @@ function msToMin(ms){
 module.exports = new class {
 	// 处理搜索返回的JSON数据
 	searchDateHandle(jsonData){
-		return jsonData.result.songs.map((item)=>{
-			let authors = "";
-			for (let x of item.ar){
-				authors += `${x.name} `;
-			}
-			return {
-				songName:item.name,
-				songId:item.id,
-				singer:authors,
-				albumId:item.al.id,
-				albumName:item.al.name,
-				albumCoverUrl:item.al.picUrl,
-				copyright:item.copyright
-			}
-		})
+		let data = ""
+		try {
+			data = jsonData.result.songs.map((item)=>{
+				let authors = "";
+				for (let x of item.ar){
+					authors += `${x.name} `;
+				}
+				return {
+					songName:item.name,
+					songId:item.id,
+					singer:authors,
+					albumId:item.al.id,
+					albumName:item.al.name,
+					albumCoverUrl:item.al.picUrl,
+					copyright:item.copyright
+				}
+			})
+		}catch (e) {return `请求数据处理错误,请更换参数或者添加isHandle=false查看返回原数据`}
+		return data
 	}
 
 	// 处理音乐播放链接数据
