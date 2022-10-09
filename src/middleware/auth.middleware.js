@@ -1,5 +1,5 @@
-const userService = require('../service/user.service');
-const errorTypes = require('../constants/error-types');
+const userService = require('service/user.service');
+const errorTypes = require('constants/error-types');
 
 // 验证密码
 const verifyPassword = async (ctx, next)=>{

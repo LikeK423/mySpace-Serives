@@ -1,5 +1,5 @@
-const axiosRequest = require('../../utils/axios-request');
-const objectToQuery = require("../../utils/objectToQuery");
+const axiosRequest = require('utils/axios-request');
+const objectToQuery = require("utils/objectToQuery");
 
 module.exports = (content)=>{
 	const object = {

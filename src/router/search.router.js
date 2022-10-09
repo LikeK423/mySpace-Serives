@@ -5,7 +5,7 @@ const {
 	bingSearch,
 	wangyiSearch,
 	biliSearch
-} = require('../controller/search.controller');
+} = require('controller/search.controller');
 
 
 const searchRouter = new Router({prefix:'/api'});

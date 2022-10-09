@@ -1,8 +1,8 @@
 const {
 	wangyiGetSongUrl
-} = require('../request');
-const dataIsHandle = require("../utils/dataIsHandle");
-const wangyiHandle = require("../handle/wangyi.handle");
+} = require('request');
+const dataIsHandle = require("utils/dataIsHandle");
+const wangyiHandle = require("handle/wangyi.handle");
 
 module.exports = new class {
 	// 获取网易云音乐播放链接

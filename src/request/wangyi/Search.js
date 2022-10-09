@@ -1,5 +1,5 @@
-const encrypt = require('../../utils/wangyi-crypto')
-const axiosRequest = require('../../utils/axios-request');
+const encrypt = require('utils/wangyi-crypto')
+const axiosRequest = require('utils/axios-request');
 const { URLSearchParams } = require("url");
 
 // const headers = {

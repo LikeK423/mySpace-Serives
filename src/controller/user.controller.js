@@ -1,4 +1,4 @@
-const service = require('../service/user.service');
+const service = require('service/user.service');
 
 module.exports = new class {
 	// 注册用户

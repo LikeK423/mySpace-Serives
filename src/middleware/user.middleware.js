@@ -1,6 +1,6 @@
-const service = require('../service/user.service');
-const md5password = require('../utils/password-handle');
-const errorTypes = require('../constants/error-types');
+const service = require('service/user.service');
+const md5password = require('utils/password-handle');
+const errorTypes = require('constants/error-types');
 
 // 验证用户是否存在（不存在就调用next()）
 const verifyUser = async (ctx, next) => {

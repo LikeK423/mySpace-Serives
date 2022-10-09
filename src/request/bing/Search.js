@@ -1,5 +1,5 @@
-const axiosRequest = require('../../utils/axios-request');
-const objectToQuery = require("../../utils/objectToQuery");
+const axiosRequest = require('utils/axios-request');
+const objectToQuery = require("utils/objectToQuery");
 
 module.exports = (content)=>{
 	const object = {
@@ -19,8 +19,7 @@ module.exports = (content)=>{
 	}
 
 	const options = {
-		// url: `https://www.bing.com/AS/Suggestions${objectToQuery(object)}`,
-		url:"http://sg1.api.bing.com/qsonhs.aspx?type=cb&cb=callback&q=seo",
+		url: `https://www.bing.com/AS/Suggestions${objectToQuery(object)}`,
 		method: 'GET'
 	}
 	console.log(options.url);

@@ -4,7 +4,7 @@ const pageRouter = new Router();
 
 const {
 	returnSamplePage
-} = require('../controller/page.controller');
+} = require('controller/page.controller');
 
 pageRouter.get('/',returnSamplePage);
 

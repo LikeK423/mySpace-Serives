@@ -1,10 +1,10 @@
 const {
 	biliVideoRecommend
-} = require('../request');
-const dataIsHandle = require('../utils/dataIsHandle');
+} = require('request');
+const dataIsHandle = require('utils/dataIsHandle');
 const {
 	recommendDataHandle,
-} = require('../handle/bili.handle');
+} = require('handle/bili.handle');
 
 
 module.exports = new class{

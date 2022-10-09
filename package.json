@@ -8,7 +8,17 @@
     "start": "nodemon .\\src\\main.js"
   },
   "_moduleAliases": {
-    "@": "./src"
+    "@": "src",
+    "app": "src/app",
+    "constants": "src/constants",
+    "controller": "src/controller",
+    "handle": "src/handle",
+    "middleware": "src/middleware",
+    "#page": "src/page",
+    "request": "src/request",
+    "router": "src/router",
+    "service": "src/service",
+    "utils": "src/utils"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ const {
 	userRegister,
 	userLogin,
 	deleteUser
-} = require('../controller/user.controller');
+} = require('controller/user.controller');
 const {
 	verifyUser,
 	encryptPassword

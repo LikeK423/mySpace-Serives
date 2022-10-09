@@ -1,6 +1,6 @@
 const {
 	letterCreate
-} = require('../service/letters.service')
+} = require('service/letters.service')
 
 module.exports = new class {
 	// 提交信件

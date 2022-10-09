@@ -7,6 +7,7 @@ module.exports = {
 	googleSearch : require('./google/Search'),
 
 	bingSearch : require('./bing/Search'),
+	bingWallpaper : require('./bing/Wallpaper'),
 
 	wangyiSearch : require('./wangyi/Search'),
 	wangyiGetSongUrl : require('./wangyi/GetSongUrl')
