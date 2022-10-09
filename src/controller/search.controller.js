@@ -50,6 +50,13 @@ module.exports = new class{
 			content:content,
 			uid:uid,
 		});
-		ctx.body = dataIsHandle(result,isHandle,biliHandle.searchDataHandle);
+
+		if(result.result === 0){
+			ctx.body = dataIsHandle(result,isHandle,biliHandle.searchDataHandle);
+		}else {
+			ctx.body = "搜索无果,请更换搜索词"
+		}
 	}
+
+
 }

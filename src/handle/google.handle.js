@@ -1,7 +1,5 @@
-class GoogleHandle{
+module.exports = new class {
 	async searchDateHandle(x){
 		return x
 	}
 }
-
-module.exports = new GoogleHandle();

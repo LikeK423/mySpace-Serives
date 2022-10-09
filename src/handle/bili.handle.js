@@ -1,4 +1,4 @@
-class BiliHandle {
+module.exports = new class {
 	// 处理视频推荐返回的JSON数据
 	recommendDataHandle (jsonData) {
 		return jsonData.data.item.map((item)=>{
@@ -25,4 +25,3 @@ class BiliHandle {
 	}
 }
 
-module.exports = new BiliHandle()
