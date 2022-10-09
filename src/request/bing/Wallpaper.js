@@ -8,7 +8,7 @@ module.exports = ()=>{
 		n:'2'
 	}
 	const options = {
-		// url:`http://cn.bing.com/HPImageArchive.aspx${objectToQuery(query)}`,
+		url:`http://cn.bing.com/HPImageArchive.aspx${objectToQuery(query)}`,
 		method: 'GET'
 	}
 	return axiosRequest(options)

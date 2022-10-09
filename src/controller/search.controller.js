@@ -54,7 +54,7 @@ module.exports = new class{
 		if(result.result === 0){
 			ctx.body = dataIsHandle(result,isHandle,biliHandle.searchDataHandle);
 		}else {
-			ctx.body = "搜索无果,请更换搜索词"
+			ctx.body = "搜索无果,原因未知"
 		}
 	}
 
