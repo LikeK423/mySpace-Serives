@@ -11,6 +11,10 @@ const errorHandler = (error, ctx) => {
 			status = 400;
 			message = "密码错误~";
 			break;
+		case errorTypes.THE_LACK_OF_PASSWORD:
+			status = 400;
+			message = "缺少密码~";
+			break;
 		default:
 			status = 404;
 			message = "未知错误~";

@@ -245,12 +245,12 @@ MYSQL_PASSWORD=12345678
 
 5.3 传入参数
 
-| 属性名 |                    描述                     | 是否必需 |    值     |
-| :----: | :-----------------------------------------: | :------: | :-------: |
-| format |           返回数据格式，默认json            |    否    | json、xml |
-|  time  | 图片日期，默认返回今天图片；0:今天，1:昨天… |    否    |   0 ~ 7   |
-| number |             返回图片数量，默认1             |    否    |  1  ~ 8   |
-|  area  |                    地区                     |    否    | zh-CN、…  |
+| 属性名 |                    描述                     | 是否必需 |    值    |
+| :----: | :-----------------------------------------: | :------: | :------: |
+| format |            返回数据格式，默认js             |    否    | js、xml  |
+|  time  | 图片日期，默认返回今天图片；0:今天，1:昨天… |    否    |  0 ~ 7   |
+| number |             返回图片数量，默认1             |    否    |  1  ~ 8  |
+|  area  |                    地区                     |    否    | zh-CN、… |
 
 5.4 返回参数
 
@@ -270,7 +270,47 @@ MYSQL_PASSWORD=12345678
 
 
 
+## 6. 网易云登录（手机、网易邮箱）
 
+最好不要多次发起同一次请求；
+
+邮箱登录我没有试过，没有网易邮箱，可能有问题
+
+6.1 请求实例
+
+> /api/wangyi/login/phone?account=xxx&password=xxx   (手机登录)
+>
+> /api/wangyi/login/mailbox?account=xxx&password=xxx	（网易邮箱登录）
+
+6.2 请求方法：GET
+
+6.3 传入参数
+
+|   属性名    |                             描述                             | 是否必需 |  值  |
+| :---------: | :----------------------------------------------------------: | :------: | :--: |
+|   account   |                      手机号或者邮箱账号                      |    是    |      |
+|  password   | 密码（未加密），与md5password任性其一，优先级小于md5password |    是    |      |
+| md5password |       md5密码，与password任性其一，优先级大于password        |    是    |      |
+
+6.4 返回参数
+
+返回token，cookie之类的数据（暂时没有经过二次处理）。
+
+
+
+## 7. 网易云登录（二维码）
+
+7.1 请求实例
+
+> /api/wangyi/login/qr
+
+7.2 请求方法：GET
+
+7.3 传入参数
+
+无
+
+7.4 返回参数
 
 
 
@@ -333,11 +373,11 @@ MYSQL_PASSWORD=12345678
 
 # 一些相关的文档
 
-不一定是否有用
-
-> Bilibili API 第三方文档：https://qinshixixing.gitbooks.io/bilibiliapi/content/
+> [Bilibili API 第三方文档](https://qinshixixing.gitbooks.io/bilibiliapi/content/)
 >
-> 哔哩哔哩-API收集整理：https://github.com/SocialSisterYi/bilibili-API-collect
+> [哔哩哔哩-API收集整理](https://github.com/SocialSisterYi/bilibili-API-collect)
 >
-> 网易云音乐 NodeJS 版 API：https://binaryify.github.io/NeteaseCloudMusicApi/#/
+> [网易云音乐 NodeJS 版 API](https://binaryify.github.io/NeteaseCloudMusicApi/#/)
+>
+> [QQ音乐 NodeJS 版 API](https://jsososo.github.io/QQMusicApi/#/)
 

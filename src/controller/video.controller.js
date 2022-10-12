@@ -15,7 +15,7 @@ module.exports = new class{
 		 // 获取请求回来的数据
 		 let result = await  biliVideoRecommend(number?number:10);
 		 // 对请求回来的数据进行处理并返回
-		 ctx.body = dataIsHandle(result,isHandle,recommendDataHandle);
+		 ctx.body = recommendDataHandle(result,isHandle);
 	}
 
 }
