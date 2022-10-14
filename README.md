@@ -71,43 +71,49 @@ MYSQL_PASSWORD=12345678
 
 1.1 请求实例：
 
-> /api/bili/video/recommend?number=10
+> /api/bili/video/recommend?number=10&refresh=1
 
 1.2 请求方式：GET
 
 1.3 传入参数说明：
 
-| 参数名 | 类型 |           描述           | 是否必需 |
-| :----: | :--: | :----------------------: | :------: |
-| number | INT  | 返回视频数量，默认返回10 |    否    |
+| 参数名  |                      描述                      | 是否必需 |
+| :-----: | :--------------------------------------------: | :------: |
+| number  |            返回视频数量，默认返回10            |    否    |
+| refresh | refresh应该是跟刷新有关的，每次刷新传入的值加1 |    否    |
 
 1.4 返回类型：
 
 ```json
 [
-    {
-        "videoId": "xxx",
-        "videoTitle": "xxx",
-        "videoPicture": "xxx",
-        "videoUrl": "xxx",
-        "userName": "xxx",
-        "userAvatar": "xxx",
-        "userSpace": "xxx"
-    }
+   "video": {
+        "id": "BV1R44y1f7h7",
+        "title": "和妹妹一起开飞机喝咖啡 #12自然之旅 我的世界",
+        "picture": "http://i1.hdslb.com/bfs/archive/0a8303d4aecaab981b894f48bfe28e929ae46fb9.jpg",
+        "url": "https://www.bilibili.com/video/BV1R44y1f7h7",
+        "view": 16105,
+        "like": 6177,
+        "danmaku": 321
+	},
+"user":{
+    "name": "悠然小天",
+    "avatar": "https://i2.hdslb.com/bfs/face/14a0990af220f76ff1ee69ad4588df0d26b85291.jpg",
+    "space": "https://space.bilibili.com/3746384"
+	}
 ]
 ```
 
 1.5  返回参数说明
 
-|    参数名    |     描述     |
-| :----------: | :----------: |
-|   videoId    |   视频BV号   |
-|  videoTitle  |   视频标题   |
-| videoPicture | 视频封面地址 |
-|   videoUrl   |   视频地址   |
-|   userName   |   作者名称   |
-|  userAvatar  | 作者头像地址 |
-|  userSpace   | 作者空间地址 |
+| 参数名  |     描述     |
+| :-----: | :----------: |
+|   id    |   视频BV号   |
+|  title  |   视频标题   |
+| picture | 视频封面地址 |
+|   url   |   视频地址   |
+|  name   |   作者名称   |
+| avatar  | 作者头像地址 |
+|  space  | 作者空间地址 |
 
 
 
@@ -302,19 +308,25 @@ MYSQL_PASSWORD=12345678
 
 7.1 请求实例
 
-> /api/wangyi/login/qr
+> /api/wangyi/login/qr	生成二维码
+>
+> /api/wangyi/login/check?key=xxx	检验二维码状态
 
 7.2 请求方法：GET
 
 7.3 传入参数
 
-无
+| 属性名 |      描述       | 是否必需 |                            返回值                            |
+| :----: | :-------------: | :------: | :----------------------------------------------------------: |
+|  key   | 生成二维码的key |    是    | 800 为二维码过期,801 为等待扫码,802 为待确认,803 为授权登录成功(803 状态码下会返回 cookies) |
+
+
 
 7.4 返回参数
 
 
 
-
+## 
 
 
 

@@ -21,7 +21,7 @@ module.exports = new class {
 		// 获取参数
 		const { account, password } = ctx.user;
 		// 返回请求结果
-		ctx.body = await wangyiLoginPhone(account, password);
+		ctx.body = await wangyiLoginMailbox(account, password);
 	}
 
 	// 网易云登录（二维码登录）
@@ -33,6 +33,7 @@ module.exports = new class {
 	}
 
 	async wangyiLoginStatus(ctx, next){
-
+		const {key} = ctx.query;
+		ctx.body = await wangyiLoginQrCheck(key);
 	}
 }

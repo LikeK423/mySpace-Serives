@@ -3,13 +3,20 @@ module.exports = new class {
 	recommendDataHandle (jsonData,isHandle='true') {
 		return isHandle === 'false' ? jsonData : jsonData.data.item.map((item) => {
 			return {
-				videoId: item.bvid,
-				videoTitle: item.title,
-				videoPicture: item.pic,
-				videoUrl: item.uri,
-				userName: item.owner.name,
-				userAvatar: item.owner.face,
-				userSpace: `https://space.bilibili.com/${item.owner.mid}`
+				video:{
+					id: item.bvid,
+					title: item.title,
+					picture: item.pic,
+					url: item.uri,
+					view:item.stat.view,
+					like:item.stat.like,
+					danmaku:item.stat.danmaku
+				},
+				user:{
+					name: item.owner.name,
+				  avatar: item.owner.face,
+					space: `https://space.bilibili.com/${item.owner.mid}`,
+				}
 			};
 		})
 
