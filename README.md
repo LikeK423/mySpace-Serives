@@ -6,7 +6,7 @@
 
 基于KOA框架的个人空间服务器代码
 
-已经部署到服务器上，把localhost换成https://www.k423.space:8888
+已经部署到服务器上（不清楚删了没有），把localhost换成https://www.k423.space:8888
 
 
 
